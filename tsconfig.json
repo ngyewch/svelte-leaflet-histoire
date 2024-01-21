@@ -1,0 +1,14 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "exclude": [
+    "node_modules/*",
+    "dist",
+    "build",
+    "histoire.config.ts"
+  ],
+  "compilerOptions": {
+    "types": [
+      "svelte"
+    ],
+  }
+}

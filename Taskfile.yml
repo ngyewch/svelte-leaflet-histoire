@@ -1,0 +1,35 @@
+version: 3
+
+tasks:
+  clean:
+    desc: Clean
+    cmds:
+      - rm -rf build dist
+
+  install:
+    desc: Install dependencies
+    cmds:
+      - pnpm install
+      - pnpm prune
+
+  build-lib:
+    dir: ../svelte-leaflet
+    cmds:
+      - eval `mise env` && task build
+
+  install-lib:
+    deps: [ build-lib ]
+    cmds:
+      - pnpm uninstall svelte-leafletjs
+      - pnpm install ../svelte-leaflet
+
+  build:
+    desc: Build
+    deps: [ install ]
+    cmds:
+      - pnpm build
+
+  dev:
+    deps: [ install ]
+    cmds:
+      - pnpm run dev
