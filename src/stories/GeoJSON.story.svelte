@@ -35,7 +35,7 @@
     });
 </script>
 
-<Hst.Story group="vector-layers">
+<Hst.Story group="other-layers">
     <LeafletMap options={mapOptions}>
         <TileLayer url={DEFAULT_TILE_URL} options={DEFAULT_TILE_LAYER_OPTIONS}/>
         <GeoJSON data={geoJsonData} options={geoJsonOptions}/>
