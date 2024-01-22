@@ -18,6 +18,10 @@ export default defineConfig({
                 title: '',
             },
             {
+                id: 'events',
+                title: '',
+            },
+            {
                 id: 'ui-layers',
                 title: 'UI Layers',
             },
