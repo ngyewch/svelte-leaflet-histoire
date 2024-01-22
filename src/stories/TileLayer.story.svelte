@@ -12,7 +12,7 @@
     };
 </script>
 
-<Hst.Story group="top">
+<Hst.Story group="raster-layers">
     <LeafletMap options={mapOptions}>
         <TileLayer url={DEFAULT_TILE_URL} options={DEFAULT_TILE_LAYER_OPTIONS}/>
     </LeafletMap>

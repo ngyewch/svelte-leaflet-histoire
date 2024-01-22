@@ -1,7 +1,7 @@
 <script lang="ts">
     import type {Hst} from '@histoire/plugin-svelte';
-    import {Circle, LeafletMap, Popup, TileLayer, Tooltip} from 'svelte-leafletjs';
-    import type {MapOptions} from 'leaflet';
+    import {LeafletMap, Popup, Rectangle, TileLayer, Tooltip} from 'svelte-leafletjs';
+    import {type LatLngBoundsExpression, type MapOptions} from 'leaflet';
     import {DEFAULT_TILE_LAYER_OPTIONS, DEFAULT_TILE_URL} from './common.js';
 
     export let Hst: Hst;
@@ -10,14 +10,18 @@
         center: [1.250111, 103.830933],
         zoom: 14,
     };
+    const latLngBounds: LatLngBoundsExpression = [
+        [1.23506, 103.80352],
+        [1.26278, 103.85065]
+    ];
 </script>
 
 <Hst.Story group="vector-layers">
     <LeafletMap options={mapOptions}>
         <TileLayer url={DEFAULT_TILE_URL} options={DEFAULT_TILE_LAYER_OPTIONS}/>
-        <Circle latLng={[1.250111, 103.830933]} radius={1000} color="#ff0000" fillColor="#ff0000">
+        <Rectangle latLngBounds={latLngBounds} color="#ff0000" fillColor="#ff0000">
             <Popup>Sentosa</Popup>
             <Tooltip>Sentosa</Tooltip>
-        </Circle>
+        </Rectangle>
     </LeafletMap>
 </Hst.Story>

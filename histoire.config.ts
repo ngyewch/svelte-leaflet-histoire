@@ -18,8 +18,28 @@ export default defineConfig({
                 title: '',
             },
             {
-                id: 'layers',
-                title: 'Layers',
+                id: 'ui-layers',
+                title: 'UI Layers',
+            },
+            {
+                id: 'raster-layers',
+                title: 'Raster Layers',
+            },
+            {
+                id: 'vector-layers',
+                title: 'Vector Layers',
+            },
+            {
+                id: 'other-layers',
+                title: 'Other Layers',
+            },
+            {
+                id: 'basic-types',
+                title: 'Basic Types',
+            },
+            {
+                id: 'controls',
+                title: 'Controls',
             }
         ],
     },

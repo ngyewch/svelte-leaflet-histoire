@@ -1,7 +1,7 @@
 <script lang="ts">
     import type {Hst} from '@histoire/plugin-svelte';
-    import {LeafletMap, TileLayer} from 'svelte-leafletjs';
-    import type {MapOptions} from 'leaflet';
+    import {LeafletMap, ScaleControl, TileLayer} from 'svelte-leafletjs';
+    import {Control, type MapOptions} from 'leaflet';
     import {DEFAULT_TILE_LAYER_OPTIONS, DEFAULT_TILE_URL} from './common.js';
 
     export let Hst: Hst;
@@ -10,10 +10,14 @@
         center: [1.364917, 103.822872],
         zoom: 11,
     };
+    const scaleControlOptions: Control.ScaleOptions = {
+        maxWidth: 200,
+    };
 </script>
 
-<Hst.Story group="top">
+<Hst.Story group="controls">
     <LeafletMap options={mapOptions}>
         <TileLayer url={DEFAULT_TILE_URL} options={DEFAULT_TILE_LAYER_OPTIONS}/>
+        <ScaleControl position="bottomleft" options={scaleControlOptions}/>
     </LeafletMap>
 </Hst.Story>

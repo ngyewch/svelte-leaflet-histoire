@@ -15,7 +15,7 @@
     };
 </script>
 
-<Hst.Story group="layers">
+<Hst.Story group="basic-types">
     <LeafletMap options={mapOptions}>
         <TileLayer url={DEFAULT_TILE_URL} options={DEFAULT_TILE_LAYER_OPTIONS}/>
         <Marker latLng={[1.282375, 103.864273]}/>
