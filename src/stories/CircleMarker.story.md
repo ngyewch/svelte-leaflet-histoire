@@ -1,4 +1,4 @@
-See https://leafletjs.com/reference.html#circle
+See https://leafletjs.com/reference.html#circlemarker
 
 ## Properties
 
@@ -17,7 +17,7 @@ See https://leafletjs.com/reference.html#circle
 | `fillColor`   | `string \| undefined`                | `"#3388ff"` | Fill color.             | 
 | `fillOpacity` | `number \| undefined`                | `0.2`       | Fill opacity.           |
 | `fillRule`    | `leaflet.FillRule \| undefined`      | `"evenodd"` | Fill rule.              |
-| `options`     | `leaflet.CircleOptions`              | `{}`        | Options.                |
+| `options`     | `leaflet.CircleMarkerOptions`        | `{}`        | Options.                |
 | `events`      | `string[]`                           | `[]`        | Events to bridge.       |
 
 ## Slots
@@ -28,6 +28,6 @@ See https://leafletjs.com/reference.html#circle
 
 ## Methods
 
-| Name                          | Description                                     |
-|-------------------------------|-------------------------------------------------|
-| `getCircle(): leaflet.Circle` | Returns the underlying Leaflet object instance. |
+| Name                                      | Description                                     |
+|-------------------------------------------|-------------------------------------------------|
+| `getCircleMarker(): leaflet.CircleMarker` | Returns the underlying Leaflet object instance. |
