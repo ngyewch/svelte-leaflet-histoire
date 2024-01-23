@@ -12,5 +12,10 @@ export default defineConfig({
             formats: ['es'],
             entry: './src/index.ts',
         },
+        rollupOptions: {
+            external: [
+                "@histoire/app",
+            ],
+        }
     }
 });
