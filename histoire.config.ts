@@ -9,7 +9,7 @@ export default defineConfig({
         HstSvelte(),
     ],
     theme: {
-        title: 'svelte-leaflet',
+        title: 'svelte-leafletjs',
     },
     tree: {
         groups: [
@@ -48,6 +48,6 @@ export default defineConfig({
         ],
     },
     vite: {
-        base: import.meta.env.HISTOIRE_BUILD === 'true' ? '/svelte-leaflet/' : undefined,
+        base: import.meta.env.HISTOIRE_BUILD === 'true' ? '/svelte-leafletjs/' : undefined,
     },
 });
