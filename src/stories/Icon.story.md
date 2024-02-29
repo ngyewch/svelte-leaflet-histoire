@@ -2,10 +2,10 @@ See https://leafletjs.com/reference.html#icon
 
 ## Properties
 
-| Name      | Type                  | Default | Description |
-|-----------|-----------------------|---------|-------------|
-| `iconUrl` | `string`              |         | Icon URL.   |
-| `options` | `leaflet.IconOptions` | `{}`    | Options.    |
+| Name      | Type                      | Default | Description |
+|-----------|---------------------------|---------|-------------|
+| `iconUrl` | `string`                  |         | Icon URL.   |
+| `options` | `leaflet.BaseIconOptions` | `{}`    | Options.    |
 
 ## Methods
 

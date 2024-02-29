@@ -1,7 +1,7 @@
 <script lang="ts">
     import type {Hst} from '@histoire/plugin-svelte';
     import {Icon, LeafletMap, Marker, TileLayer} from 'svelte-leafletjs';
-    import {type IconOptions, type MapOptions} from 'leaflet';
+    import {type BaseIconOptions, type MapOptions} from 'leaflet';
     import {DEFAULT_TILE_LAYER_OPTIONS, DEFAULT_TILE_URL} from './common.js';
 
     export let Hst: Hst;
@@ -10,8 +10,7 @@
         center: [1.364917, 103.822872],
         zoom: 11,
     };
-    const iconOptions: IconOptions = {
-        iconUrl: 'icons/airport.svg',
+    const iconOptions: BaseIconOptions = {
         iconSize: [41, 41],
         iconAnchor: [20, 41],
         popupAnchor: [1, -34],
